@@ -27,7 +27,7 @@ contract Tokens {
             "You Have Not Enough Money !!!"
         );
         require(msg.value==basefees,"Please provide base fees for transfer tokens ");
-        balanceOf[msg.sender] = _value;
+        balanceOf[msg.sender] -=  _value;
         balanceOf[_to] += _value;
         emit Transfer(msg.sender, _to, _value);
         return true;

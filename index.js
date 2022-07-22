@@ -34,6 +34,7 @@ const main = async () => {
 
   // Transfer tokens via contract Function
   console.log("Loading....");
+  console.log(details);
   let acc2 = accounts[4];
   let initialBalAcc1 = await contract.methods.balanceOf(admin).call();
   let initialBalAcc2 = await contract.methods.balanceOf(acc2).call();
@@ -43,7 +44,7 @@ const main = async () => {
     .send({ from: admin, value: 100 });
   let balAfterTransfer2 = await contract.methods.balanceOf(acc2).call();
   let balAfterTransfer1 = await contract.methods.balanceOf(admin).call();
-
+  
   let txnDetails = {
     "Initial Balance Account one": initialBalAcc1,
     "final Balance Account one": balAfterTransfer1,
