@@ -1,7 +1,7 @@
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 //
 // const fs = require('fs');
-// const mnemonic = fs.readFileSync(".secret").toString().trim();
+const mnemonic = "easy sleep figure mail soup planet indoor cluster caution meadow raccoon fit";
 
 
 
@@ -16,7 +16,7 @@ module.exports = {
     binance: {
       provider: () =>
         new HDWalletProvider(
-          'divide soccer claim swift opinion letter opinion tail nose burst tissue shock',
+          mnemonic,
           `https://data-seed-prebsc-1-s1.binance.org:8545/`
         ),
       network_id: 97,
