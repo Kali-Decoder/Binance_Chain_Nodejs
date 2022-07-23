@@ -33,18 +33,18 @@ const main = async (addr, value) => {
     basefees,
   };
 
-  // Transfer tokens via contract Function
-  //   console.log("Loading....");
-  console.log(details);
-  //   let acc2 = accounts[4];
-  const gasPrice = await web3.eth.getGasPrice();
-  let intial_Account_Balance_Admin = await contract.methods.balanceOf(admin).call();
-  let initial_Account_Balance_To = await contract.methods.balanceOf(addr).call();
+    // Transfer tokens via contract Function
+    //   console.log("Loading....");
+    console.log(details);
+    //   let acc2 = accounts[4];
+    const gasPrice = await web3.eth.getGasPrice();
+    let intial_Account_Balance_Admin = await contract.methods.balanceOf(admin).call();
+    let initial_Account_Balance_To = await contract.methods.balanceOf(addr).call();
 
     await contract.methods
       .transfer(addr, value)
-      .send({ from: admin, value: 100, gas: gasPrice });
-  const tx = {
+      .send({ from: admin, value: 100, gas: 1000000 });
+    const tx = {
     // this could be provider.addresses[0] if it exists
     from: admin,
     // target address, this could be a smart contract address
