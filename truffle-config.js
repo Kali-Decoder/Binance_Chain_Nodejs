@@ -1,7 +1,7 @@
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 //
 // const fs = require('fs');
-const mnemonic = "easy sleep figure mail soup planet indoor cluster caution meadow raccoon fit";
+const mnemonic = process.env.MNEMONIC;
 
 
 
